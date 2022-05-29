@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP3
 {
-    internal class KonutKrediManager : IKrediManager
+    class KonutKrediManager : IKrediManager
     {
         public void BiseyYap()
         {

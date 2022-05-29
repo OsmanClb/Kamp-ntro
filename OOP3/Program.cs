@@ -1,6 +1,6 @@
 ﻿namespace OOP3
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
@@ -21,13 +21,16 @@
             IKrediManager ihtiyacKrediManager = new IhtiyacKrediManager();
             IKrediManager tasitKrediManager = new TasıtKrediManager();
             IKrediManager konutKrediManager = new KonutKrediManager();
-            
+
+            ILoggerService databaseLoggerService = new DatabaseLoggerService();
+            ILoggerService fileLoggerService = new FileLoggerService();
+
             BasvuruManager basvuruManager = new BasvuruManager();
-            //basvuruManager.BasvuruYap(konutKrediManager);
+            basvuruManager.BasvuruYap(konutKrediManager, databaseLoggerService);
 
             List<IKrediManager> krediler = new List<IKrediManager>() {ihtiyacKrediManager,tasitKrediManager,konutKrediManager };
 
-            basvuruManager.KrediOnBilgilendirmesiYap(krediler);
+            //basvuruManager.KrediOnBilgilendirmesiYap(krediler);
 
         }
     }
