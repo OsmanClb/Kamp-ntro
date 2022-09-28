@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP3
+namespace InterfaceAbstractDemo.Abstract
 {
-    interface ILoggerService
+    public interface  IEntitiy
     {
-        void Log();
-       
+
     }
 }
